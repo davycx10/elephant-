@@ -22,12 +22,12 @@ echo ("Connexion réussie à la base de données");
 /*$designation = 'souris';
 $prix = 15;
 $categorie = 'informatique'; //informations à insérer dans le 1er enregistrement 
-//préparation de la requete 
-//$sql = $conn->prepare("INSERT INTO produits (designation,prix_prod, categorie_prod) VALUES (?,?,?)");// les ? (paramètres placeholders) servent à protéger les données des injections SQL  
-//Si on met les valeurs directement dans la requete l'étape de liaison sera retirée
-//Lier les paramètres à la requete
-//$sql->bind_param("sds",$designation ,$prix ,$categorie );
-//executer la requete 
+préparation de la requete 
+$sql = $conn->prepare("INSERT INTO produits (designation,prix_prod, categorie_prod) VALUES (?,?,?)");// les ? (paramètres placeholders) servent à protéger les données des injections SQL  
+Si on met les valeurs directement dans la requete l'étape de liaison sera retirée
+Lier les paramètres à la requete
+$sql->bind_param("sds",$designation ,$prix ,$categorie );
+executer la requete 
 if($sql->execute()){
     echo "<br> enregistrement ajouté avec succès!";
 }else{
